@@ -2,21 +2,13 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    behaviors {
-        mode_toggle: mode_toggle {
-            compatible = "zmk,behavior-toggle-layer";
-            #binding-cells = <0>;
-            toggle-layer = <1>;
-        };
-    };
-
     combos {
         compatible = "zmk,combos";
 
-        mode_combo {
-            timeout-ms = <200>;
+        mode_toggle {
+            timeout-ms = <300>;
             key-positions = <0 1>;
-            bindings = <&mode_toggle>;
+            bindings = <&tog 1>;
         };
     };
 
@@ -26,14 +18,14 @@
         arrows {
             display-name = "Arrows";
             bindings = <
-                &kp LEFT   &kp RIGHT
+                &kp LEFT  &kp RIGHT
             >;
         };
 
-        page_turn {
+        pages {
             display-name = "Pages";
             bindings = <
-                &kp PG_UP  &kp PG_DN
+                &kp PG_UP &kp PG_DN
             >;
         };
     };

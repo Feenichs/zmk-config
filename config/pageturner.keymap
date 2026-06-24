@@ -2,13 +2,38 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    behaviors {
+        mode_toggle: mode_toggle {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <0>;
+            toggle-layer = <1>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        mode_combo {
+            timeout-ms = <200>;
+            key-positions = <0 1>;
+            bindings = <&mode_toggle>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            display-name = "Base";
+        arrows {
+            display-name = "Arrows";
             bindings = <
-                &kp LEFT &kp RIGHT
+                &kp LEFT   &kp RIGHT
+            >;
+        };
+
+        page_turn {
+            display-name = "Pages";
+            bindings = <
+                &kp PG_UP  &kp PG_DN
             >;
         };
     };

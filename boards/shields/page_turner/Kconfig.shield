@@ -1,2 +1,0 @@
-config SHIELD_PAGE_TURNER
-    def_bool $(shields_list_contains,page_turner)

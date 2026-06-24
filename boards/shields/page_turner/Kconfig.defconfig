@@ -1,6 +1,0 @@
-if SHIELD_PAGE_TURNER
-
-config ZMK_KEYBOARD_NAME
-    default "PageTurner9000"
-
-endif

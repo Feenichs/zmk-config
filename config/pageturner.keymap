@@ -6,9 +6,9 @@
         compatible = "zmk,keymap";
 
         default_layer {
+            display-name = "Base";
             bindings = <
-                &kp LEFT
-                &kp RIGHT
+                &kp A &kp B
             >;
         };
     };

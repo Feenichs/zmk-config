@@ -1,0 +1,9 @@
+﻿file_format: "1"
+id: page_turner
+name: Page Turner
+type: shield
+url: https://github.com/yourname/page-turner
+requires:
+  - nice_nano_v2
+features:
+  - keys

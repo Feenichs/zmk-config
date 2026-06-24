@@ -1,0 +1,15 @@
+/ {
+    buttons {
+        compatible = "gpio-keys";
+
+        left_button {
+            gpios = <&gpio0 6 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            label = "LEFT_BUTTON";
+        };
+
+        right_button {
+            gpios = <&gpio0 8 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            label = "RIGHT_BUTTON";
+        };
+    };
+};
